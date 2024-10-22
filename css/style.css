@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
+
+:root {
+    --color-primario: #e2f4f1;
+    --color-secundario: #fff;
+    --color-terciario: #457f76;
+    --color-cuarto: #2b554e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-primario);
+    font-family: "Arima", system-ui;
+    font-optical-sizing: auto;
+}
+
+.nav__container {
+    top: 0;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background-color: var(--color-secundario);
+    padding: 15px 16%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__enlaces {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav__enlaces-svg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.nav__enlaces-svg a {
+    color: var(--color-cuarto);
+    font-size: 16px;
+}
