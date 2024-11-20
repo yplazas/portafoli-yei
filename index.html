@@ -1,107 +1,561 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 </head>
-
 <body>
     <header>
-        <nav class="nav__container">
-            <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24"
-                fill="none" stroke="#2b554e" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round"
-                width="36" height="36" stroke-width="2">
-                <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
-                <path d="M8 11l0 5"></path>
-                <path d="M8 8l0 .01"></path>
-                <path d="M12 16l0 -5"></path>
-                <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
-            </svg>
-
-            <div class="nav__enlaces">
-                <div class="nav__enlaces-svg">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#2b554e"
-                        stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="2">
-                        <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
-                        <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
-                        <path d="M10 12h4v4h-4z"></path>
-                    </svg>
-                    <a href="#">Inicio</a>
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__logo">
+                    <a href="index.html" class="nav__logo-link"><svg xmlns="http://www.w3.org/2000/svg"
+                            x-bind:width="size" x-bind:height="size" viewBox="0 2 24 24" fill="none"
+                            stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round"
+                            stroke-linejoin="round" width="36" height="36" stroke-width="2">
+                            <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                            </path>
+                            <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"></path>
+                            <path d="M12 12l0 .01"></path>
+                            <path d="M3 13a20 20 0 0 0 18 0"></path>
+                        </svg>
+                        <span class="nav__logo-text">PORTAFOLIO</span>
+                    </a>
                 </div>
-                <div class="nav__enlaces-svg">
-                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24"
-                        fill="none" stroke="#2b554e" x-bind:stroke-width="stroke" stroke-linecap="round"
-                        stroke-linejoin="round" width="20" height="20" stroke-width="2">
-                        <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
-                        <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
-                    </svg>
-                    <a href="#">Sobre mi</a>
+                <div class="nav__links">
+                    <a class="nav__link" href="#inicio">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                            <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+                            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+                            <path d="M10 12h4v4h-4z"></path>
+                        </svg>
+                        <span class="nav__link-text">Inicio</span>
+                    </a>
+                    <a class="nav__link" href="#sobre-mi">
+                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                            viewBox="0 0 24 24" fill="none" x-bind:stroke-width="stroke" stroke-linecap="round"
+                            stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                        </svg>
+                        <span class="nav__link-text">Sobre mi</span>
+                    </a>
+                    <a class="nav__link" href="#academia">
+                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                            viewBox="0 0 24 24" fill="none" x-bind:stroke-width="stroke" stroke-linecap="round"
+                            stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                            <path d="M5 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z">
+                            </path>
+                            <path d="M9 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z">
+                            </path>
+                            <path d="M5 8h4"></path>
+                            <path d="M9 16h4"></path>
+                            <path
+                                d="M13.803 4.56l2.184 -.53c.562 -.135 1.133 .19 1.282 .732l3.695 13.418a1.02 1.02 0 0 1 -.634 1.219l-.133 .041l-2.184 .53c-.562 .135 -1.133 -.19 -1.282 -.732l-3.695 -13.418a1.02 1.02 0 0 1 .634 -1.219l.133 -.041z">
+                            </path>
+                            <path d="M14 9l4 -1"></path>
+                            <path d="M16 16l3.923 -.98"></path>
+                        </svg>
+                        <span class="nav__link-text">Academia</span>
+                    </a>
+                    <!-- <a class="nav__link" href="#experiencia">
+                            <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                                viewBox="0 0 24 24" fill="none" x-bind:stroke-width="stroke" stroke-linecap="round"
+                                stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                <path
+                                    d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                                </path>
+                                <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"></path>
+                                <path d="M12 12l0 .01"></path>
+                                <path d="M3 13a20 20 0 0 0 18 0"></path>
+                            </svg>
+                            <span class="nav__link-text">Experiencia</span>
+                        </a> -->
+                    <a class="nav__link" href="#proyectos">
+                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                            viewBox="0 0 24 24" fill="none" x-bind:stroke-width="stroke" stroke-linecap="round"
+                            stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                            <path d="M11.5 17h-7.5a1 1 0 0 1 -1 -1v-12a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v9"></path>
+                            <path d="M3 13h18"></path>
+                            <path d="M8 21h3.5"></path>
+                            <path d="M10 17l-.5 4"></path>
+                            <path d="M20 21l2 -2l-2 -2"></path>
+                            <path d="M17 17l-2 2l2 2"></path>
+                        </svg>
+                        <span class="nav__link-text">Proyectos</span>
+                    </a>
+                    <a class="nav__link" href="#contacto">
+                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                            viewBox="0 0 24 24" fill="none" x-bind:stroke-width="stroke" stroke-linecap="round"
+                            stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                            <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"></path>
+                        </svg>
+                        <span class="nav__link-text">Contacto</span>
+                    </a>
                 </div>
-                <div class="nav__enlaces-svg">
-                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24"
-                        fill="none" stroke="#2b554e" x-bind:stroke-width="stroke" stroke-linecap="round"
-                        stroke-linejoin="round" width="20" height="20" stroke-width="2">
-                        <path d="M5 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"></path>
-                        <path d="M9 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"></path>
-                        <path d="M5 8h4"></path>
-                        <path d="M9 16h4"></path>
-                        <path
-                            d="M13.803 4.56l2.184 -.53c.562 -.135 1.133 .19 1.282 .732l3.695 13.418a1.02 1.02 0 0 1 -.634 1.219l-.133 .041l-2.184 .53c-.562 .135 -1.133 -.19 -1.282 -.732l-3.695 -13.418a1.02 1.02 0 0 1 .634 -1.219l.133 -.041z">
-                        </path>
-                        <path d="M14 9l4 -1"></path>
-                        <path d="M16 16l3.923 -.98"></path>
-                    </svg><a href="#">Academia</a>
-                </div>
-                <div class="nav__enlaces-svg">
-                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24"
-                        fill="none" stroke="#2b554e" x-bind:stroke-width="stroke" stroke-linecap="round"
-                        stroke-linejoin="round" width="20" height="20" stroke-width="2">
-                        <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
-                        <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"></path>
-                        <path d="M12 12l0 .01"></path>
-                        <path d="M3 13a20 20 0 0 0 18 0"></path>
-                    </svg>
-                    <a href="#">Experiencia</a>
-                </div>
-                <div class="nav__enlaces-svg">
-                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24"
-                        fill="none" stroke="#2b554e" x-bind:stroke-width="stroke" stroke-linecap="round"
-                        stroke-linejoin="round" width="20" height="20" stroke-width="2">
-                        <path d="M11.5 17h-7.5a1 1 0 0 1 -1 -1v-12a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v9"></path>
-                        <path d="M3 13h18"></path>
-                        <path d="M8 21h3.5"></path>
-                        <path d="M10 17l-.5 4"></path>
-                        <path d="M20 21l2 -2l-2 -2"></path>
-                        <path d="M17 17l-2 2l2 2"></path>
-                    </svg><a href="#">Proyectos</a>
-                </div>
-                <div class="nav__enlaces-svg">
-                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24"
-                        fill="none" stroke="#2b554e" x-bind:stroke-width="stroke" stroke-linecap="round"
-                        stroke-linejoin="round" width="20" height="20" stroke-width="2">
-                        <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"></path>
-                    </svg>
-                    <a href="#">Contacto</a>
-                </div>
-
             </div>
         </nav>
     </header>
-    <main>
-        <section class="inicio"></section>
-        <section class="sobre-mi"></section>
-        <section class="habilidades"></section>
-        <section class="academia"></section>
-        <section class="experiencia"></section>
-        <section class="proyectos"></section>
-        <section class="contacto"></section>
-    </main>
-    <footer></footer>
+    <div class="container">
+        <main class="main">
+            <div class="main__container">
+                <section class="main__contenido">
+                    <section id="inicio" class="contenido__inicio">
+                        <div class="contenido__inicio-portada">
+                            <svg id="wave" style="transform: rotate(180deg); transition: 0.3s" viewBox="0 0 1440 350"
+                                version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                                        <stop stop-color="rgba(69, 127, 118, 1)" offset="0%"></stop>
+                                        <stop stop-color="rgba(69, 127, 118, 1)" offset="100%"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path style="transform: translate(0, 0px); opacity: 1" fill="url(#sw-gradient-0)"
+                                    d="M0,105L80,87.5C160,70,320,35,480,64.2C640,93,800,187,960,210C1120,233,1280,187,1440,145.8C1600,105,1760,70,1920,64.2C2080,58,2240,82,2400,81.7C2560,82,2720,58,2880,75.8C3040,93,3200,152,3360,145.8C3520,140,3680,70,3840,40.8C4000,12,4160,23,4320,23.3C4480,23,4640,12,4800,17.5C4960,23,5120,47,5280,87.5C5440,128,5600,187,5760,210C5920,233,6080,222,6240,215.8C6400,210,6560,210,6720,215.8C6880,222,7040,233,7200,204.2C7360,175,7520,105,7680,110.8C7840,117,8000,198,8160,245C8320,292,8480,303,8640,280C8800,257,8960,198,9120,186.7C9280,175,9440,210,9600,215.8C9760,222,9920,198,10080,198.3C10240,198,10400,222,10560,204.2C10720,187,10880,128,11040,99.2C11200,70,11360,70,11440,70L11520,70L11520,350L11440,350C11360,350,11200,350,11040,350C10880,350,10720,350,10560,350C10400,350,10240,350,10080,350C9920,350,9760,350,9600,350C9440,350,9280,350,9120,350C8960,350,8800,350,8640,350C8480,350,8320,350,8160,350C8000,350,7840,350,7680,350C7520,350,7360,350,7200,350C7040,350,6880,350,6720,350C6560,350,6400,350,6240,350C6080,350,5920,350,5760,350C5600,350,5440,350,5280,350C5120,350,4960,350,4800,350C4640,350,4480,350,4320,350C4160,350,4000,350,3840,350C3680,350,3520,350,3360,350C3200,350,3040,350,2880,350C2720,350,2560,350,2400,350C2240,350,2080,350,1920,350C1760,350,1600,350,1440,350C1280,350,1120,350,960,350C800,350,640,350,480,350C320,350,160,350,80,350L0,350Z">
+                                </path>
+                            </svg>
+                            <div class="contenido__inicio-imagen-perfil">
+                                <img src="img/me.jpeg" alt="imagen de perfil" />
+                            </div>
+                        </div>
 
+                        <div class="contenido__inicio-info">
+                            <h1>Ing. Yeison Plazas</h1>
+                            <p>
+                                Ingeniero de Sistemas | Desarrollador Web | GIT | HTML | CSS |
+                                Javascript / Typescript | Node JS | React
+                            </p>
+                            <div class="contenido__inicio-redes-sociales">
+                                <a class="redes-sociales__link" href="https://github.com/yplazas" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-brand-github" width="30" height="30"
+                                        viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                                    </svg>
+                                </a>
+                                <a class="redes-sociales__link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-brand-whatsapp" width="30" height="30"
+                                        viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                                        <path
+                                            d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+                                    </svg>
+                                </a>
+                                <a class="redes-sociales__link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-brand-linkedin" width="30" height="30"
+                                        viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                        <path d="M8 11l0 5" />
+                                        <path d="M8 8l0 .01" />
+                                        <path d="M12 16l0 -5" />
+                                        <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+                                    </svg>
+                                </a>
+                                <a class="redes-sociales__link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x"
+                                        width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                                        <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="sobre-mi" class="contenido__sobre-mi">
+                        <h2>SOBRE MI</h2>
+                        <p>
+                            Me considero una persona persistente, responsable, colaborativa
+                            y organizada, comprometida a dar siempre el 100% de mi esfuerzo
+                            para alcanzar los mejores resultados en cualquier labor que
+                            desempeñe.
+                        </p>
+                        <br />
+                        <p>
+                            Actualmente, estoy concentrado en ampliar mis habilidades en el
+                            ámbito de la programación, especialmente en el desarrollo web.
+                            Me encuentro aprendiendo HTML, CSS, JavaScript, Typescript,
+                            Node.js y Git, junto con otras tecnologías pertinentes. Este
+                            enfoque tiene como objetivo complementar y enriquecer mi perfil
+                            profesional, permitiéndome estar preparado para desafíos más
+                            amplios y contribuir de manera más integral en proyectos
+                            futuros.
+                        </p>
+                    </section>
+                    <section id="academia" class="contenido__academia">
+                        <h2>ACADEMIA</h2>
+                        <div class="contenido__academia-cursos">
+                            <div class="contenido__academia-curso">
+                                <div class="academia-curso__logo">
+                                    <img src="./img/Udemy.png" alt="" />
+                                </div>
+                                <div class="academia-curso__descripcion">
+                                    <h3>Udemy</h3>
+                                    <p>Cursos Online</p>
+                                    <span>2024</span>
+                                </div>
+                            </div>
+                            <div class="contenido__academia-curso">
+                                <div class="academia-curso__logo">
+                                    <img src="./img/platzi.png" alt="" />
+                                </div>
+                                <div class="academia-curso__descripcion">
+                                    <h3>Platzi</h3>
+                                    <p>Cursos Online</p>
+                                    <span>2022 - 2024</span>
+                                </div>
+                            </div>
+                            <div class="contenido__academia-curso">
+                                <div class="academia-curso__logo">
+                                    <img src="./img/aluraoracle.png" alt="" />
+                                </div>
+                                <div class="academia-curso__descripcion">
+                                    <h3>Alura Latam + Oracle</h3>
+                                    <p>Cursos Online</p>
+                                    <span>2024</span>
+                                </div>
+                            </div>
+
+                            <div class="contenido__academia-curso">
+                                <div class="academia-curso__logo">
+                                    <img src="./img/uniguajira.png" alt="logo-uniguajira" />
+                                </div>
+                                <div class="academia-curso__descripcion">
+                                    <h3>Universidad de la Guajira</h3>
+                                    <p>Ingeniería de sistemas</p>
+                                    <span>2014 - 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contenido__academia-link">
+                            <a href="" class="academia-link__ver-mas">Ver certificados</a>
+                        </div>
+                    </section>
+
+                </section>
+                <section class="main__info">
+                    <div class="info__skills">
+                        <h2>HABILIDADES</h2>
+                        <div class="info__skill">
+                            <span>GIT</span>
+                            <div class="info__skill-bar">
+                                <div class="info__skill-progress" style="width: 70%"></div>
+                            </div>
+                            <span class="info__skill-percent">70%</span>
+                        </div>
+                        <div class="info__skill">
+                            <span>HTML</span>
+                            <div class="info__skill-bar">
+                                <div class="info__skill-progress" style="width: 70%"></div>
+                            </div>
+                            <span class="info__skill-percent">70%</span>
+                        </div>
+                        <div class="info__skill">
+                            <span>CSS</span>
+                            <div class="info__skill-bar">
+                                <div class="info__skill-progress" style="width: 70%"></div>
+                            </div>
+                            <span class="info__skill-percent">70%</span>
+                        </div>
+                        <div class="info__skill">
+                            <span>JAVASCRIPT</span>
+                            <div class="info__skill-bar">
+                                <div class="info__skill-progress" style="width: 60%"></div>
+                            </div>
+                            <span class="info__skill-percent">60%</span>
+                        </div>
+                        <div class="info__skill">
+                            <span>TYPESCRIPT</span>
+                            <div class="info__skill-bar">
+                                <div class="info__skill-progress" style="width: 50%"></div>
+                            </div>
+                            <span class="info__skill-percent">50%</span>
+                        </div>
+                        <div class="info__skill">
+                            <span>REACT</span>
+                            <div class="info__skill-bar">
+                                <div class="info__skill-progress" style="width: 20%"></div>
+                            </div>
+                            <span class="info__skill-percent">20%</span>
+                        </div>
+                        <div class="info__skill">
+                            <span>NODE JS</span>
+                            <div class="info__skill-bar">
+                                <div class="info__skill-progress" style="width: 50%"></div>
+                            </div>
+                            <span class="info__skill-percent">50%</span>
+                        </div>
+                    </div>
+
+                    <div class="info__idiomas">
+                        <h2>IDIOMAS</h2>
+                        <div class="info__idioma">
+                            <span>ESPAÑOL</span>
+                            <div class="info__idioma-bar">
+                                <div class="info__idioma-progress" style="width: 100%"></div>
+                            </div>
+                            <span class="info__idioma-percent">100%</span>
+                        </div>
+                        <div class="info__idioma">
+                            <span>INGLES</span>
+                            <div class="info__idioma-bar">
+                                <div class="info__idioma-progress" style="width: 30%"></div>
+                            </div>
+                            <span class="info__idioma-percent">30%</span>
+                        </div>
+                    </div>
+
+                    <div class="info__hobbies">
+                        <h2>HOBBIES</h2>
+                        <div class="info__hobbie">
+                            <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke"
+                                stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="2">
+                                <path d="M11 4a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
+                                <path d="M3 17l5 1l.75 -1.5"></path>
+                                <path d="M14 21v-4l-4 -3l1 -6"></path>
+                                <path d="M6 12v-3l5 -1l3 3l3 1"></path>
+                                <path d="M19.5 20a.5 .5 0 1 0 0 -1a.5 .5 0 0 0 0 1z" fill="currentColor"></path>
+                            </svg>
+                            <span>JUGAR FUTBOL</span>
+                        </div>
+                        <div class="info__hobbie">
+                            <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke"
+                                stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="2">
+                                <path
+                                    d="M10 19h-6a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1h6a2 2 0 0 1 2 2a2 2 0 0 1 2 -2h6a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-6a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2z">
+                                </path>
+                                <path d="M12 5v16"></path>
+                                <path d="M7 7h1"></path>
+                                <path d="M7 11h1"></path>
+                                <path d="M16 7h1"></path>
+                                <path d="M16 11h1"></path>
+                                <path d="M16 15h1"></path>
+                            </svg>
+                            <span>LEER LIBROS DE SUPERACION PERSONAL</span>
+                        </div>
+                        <div class="info__hobbie">
+                            <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke"
+                                stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="2">
+                                <path
+                                    d="M12.718 20.713a7.64 7.64 0 0 1 -7.48 -12.755l.72 -.72a7.643 7.643 0 0 1 9.105 -1.283l2.387 -2.345a2.08 2.08 0 0 1 3.057 2.815l-.116 .126l-2.346 2.387a7.644 7.644 0 0 1 -1.052 8.864">
+                                </path>
+                                <path d="M14 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                <path d="M9.3 5.3l9.4 9.4"></path>
+                            </svg>
+                            <span>JUGAR TENIS DE MESA</span>
+                        </div>
+                        <div class="info__hobbie">
+                            <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke"
+                                stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="2">
+                                <path
+                                    d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                                </path>
+                                <path d="M16 3l-4 4l-4 -4"></path>
+                            </svg>
+                            <span>VER ANIMES, PELICULAS, SERIES</span>
+                        </div>
+                        <div class="info__hobbie">
+                            <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke"
+                                stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="2">
+                                <path
+                                    d="M2 6m0 2a2 2 0 0 1 2 -2h16a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-16a2 2 0 0 1 -2 -2z">
+                                </path>
+                                <path d="M6 12h4m-2 -2v4"></path>
+                                <path d="M15 11l0 .01"></path>
+                                <path d="M18 13l0 .01"></path>
+                            </svg>
+                            <span>JUGAR VIDEOJUEGOS</span>
+                        </div>
+                    </div>
+
+                    <div id="contacto" class="info__contactos">
+                        <h2>CONTACTO</h2>
+                        <div class="info__contacto">
+                            <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke"
+                                stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="2">
+                                <path
+                                    d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z">
+                                </path>
+                                <path d="M3 7l9 6l9 -6"></path>
+                            </svg>
+                            <span>yeialex9511@outlook.com</span>
+                        </div>
+                        <div class="info__contacto">
+                            <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke"
+                                stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="2">
+                                <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
+                                <path
+                                    d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1">
+                                </path>
+                            </svg>
+                            <span>+57 3044339696</span>
+                        </div>
+                        <div class="info__contacto">
+                            <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke"
+                                stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="2">
+                                <path d="M3 21l18 0"></path>
+                                <path d="M4 21v-11l2.5 -4.5l5.5 -2.5l5.5 2.5l2.5 4.5v11"></path>
+                                <path d="M12 9m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                <path d="M9 21v-5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v5"></path>
+                            </svg>
+                            <span>La Guajira, Colombia</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!-- <section id="experiencia" class="contenido__experiencia">
+            <h2>EXPERIENCIA</h2>
+        </section> -->
+        <section id="proyectos" class="contenido__proyectos">
+            <h2>PROYECTOS</h2>
+            <div class="proyectos__container">
+                <div class="proyecto">
+                    <img src="img/aluraGeek.png" alt="alura Geek">
+                    <h3>Alura Geek</h3>
+                    <p>Este proyecto simula el funcionamiento de una tienda virtual, permitiendo a los usuarios
+                        visualizar una lista de productos, agregar nuevos productos y eliminar los existentes. En su
+                        desarrollo se implementaron diversas técnicas fundamentales de desarrollo web, utilizando HTML,
+                        CSS y JavaScript.</p>
+                    <div class="proyecto__link">
+                        <a target="_blank" href="https://github.com/yplazas/Alura-geek--Alura-Latam.git">
+                            <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke"
+                                stroke-linecap="round" stroke-linejoin="round" width="22" height="22" stroke-width="2">
+                                <path
+                                    d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5">
+                                </path>
+                            </svg>
+                            <span class="proyecto__link-text">Codigo</span>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/encriptadorTexto.png" alt="Encriptador de texto">
+                    <h3>Encriptador de texto</h3>
+                    <p>Es una aplicación que encripta textos, donde se podrá intercambiar mensajes secretos con otras
+                        personas
+                        que sepan el secreto de la encriptación utilizada. En su desarrollo se implementaron diversas
+                        técnicas fundamentales de desarrollo web, utilizando HTML, CSS y JavaScript.</p>
+
+                    <div class="proyecto__link">
+                        <a target="_blank"
+                            href="https://github.com/yplazas/Encriptador-texto-challenge--Alura-Latam.git">
+                            <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke"
+                                stroke-linecap="round" stroke-linejoin="round" width="22" height="22" stroke-width="2">
+                                <path
+                                    d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5">
+                                </path>
+                            </svg>
+                            <span class="proyecto__link-text">Codigo</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/dashboard.png" alt="dashboard">
+                    <h3>Dashboard</h3>
+                    <p>Este proyecto consiste en la creación de un clon de un dashboard, utilizando conocimientos en
+                        HTML y CSS. Para el posicionamiento de los elementos se emplearon técnicas modernas como Grid y
+                        Flexbox. Además, este trabajo fue realizado en colaboración con lpolobeltran.</p>
+                    <div class="proyecto__link">
+                        <a target="_blank" href="https://github.com/yplazas/interfaz-dashboard.git">
+                            <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke"
+                                stroke-linecap="round" stroke-linejoin="round" width="22" height="22" stroke-width="2">
+                                <path
+                                    d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5">
+                                </path>
+                            </svg>
+                            <span class="proyecto__link-text">Codigo</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <section class="footer__container">
+                <div class="footer__links">
+                    <a class="footer__link" href="https://github.com/yplazas" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github"
+                            width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#457f76" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                        </svg>
+                    </a>
+                    <a class="footer__link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp"
+                            width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#457f76" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                            <path
+                                d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+                        </svg>
+                    </a>
+                    <a class="footer__link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin"
+                            width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#457f76" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                            <path d="M8 11l0 5" />
+                            <path d="M8 8l0 .01" />
+                            <path d="M12 16l0 -5" />
+                            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+                        </svg>
+                    </a>
+                    <a class="footer__link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x" width="36"
+                            height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#457f76" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                            <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer__copyright">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="25"
+                        height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#457f76" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                        <path
+                            d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173" />
+                    </svg>
+                    <p>All rights reserved to Yeison</p>
+                </div>
+            </section>
+        </footer>
+    </div>
 </body>
 
 </html>
