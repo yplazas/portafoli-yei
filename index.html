@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <script src="js/script.js" defer></script>
 </head>
+
 <body>
     <header>
         <nav class="nav">
@@ -97,6 +100,11 @@
                         </svg>
                         <span class="nav__link-text">Contacto</span>
                     </a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </nav>
@@ -191,7 +199,7 @@
                             Actualmente, estoy concentrado en ampliar mis habilidades en el
                             ámbito de la programación, especialmente en el desarrollo web.
                             Me encuentro aprendiendo HTML, CSS, JavaScript, Typescript,
-                            Node.js y Git, junto con otras tecnologías pertinentes. Este
+                            Node.js, React y Git, junto con otras tecnologías pertinentes. Este
                             enfoque tiene como objetivo complementar y enriquecer mi perfil
                             profesional, permitiéndome estar preparado para desafíos más
                             amplios y contribuir de manera más integral en proyectos
@@ -243,12 +251,145 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="contenido__academia-link">
-                            <a href="" class="academia-link__ver-mas">Ver certificados</a>
+                        <div class="contenido__academia-links">
+                            <a id="ver-mas">Ver certificados</a>
                         </div>
                     </section>
+                    <section class="contenido__certificados">
+                        <div class="contenido__certificados-titulo">
+                            <h2>CERTIFICADOS</h2>
+                            <a id="cerrarCertificados">
+                                <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke"
+                                    stroke-linecap="round" stroke-linejoin="round" width="30" height="30"
+                                    stroke-width="2">
+                                    <path d="M18 6l-12 12"></path>
+                                    <path d="M6 6l12 12"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="contenido__certificados-cursos">
+                            <!-- udemy -->
+                            <div class="contenido__certificados-curso">
+                                <div class="certificados-curso__logo">
+                                    <img src="./img/udemy.png" alt="" />
+                                </div>
+                                <div class="certificados-curso__descripcion">
+                                    <h3>Curso Universidad Desarrollo Web - FrontEnd Web Developer</h3>
+                                    <p>Udemy</p>
+                                    <a href="https://www.udemy.com/certificate/UC-895f2ce8-66e0-4b6f-94e1-29e515d4a3f8"
+                                        target="_blank">Ver credencial</a>
+                                </div>
+                            </div>
+                            <div class="contenido__certificados-curso">
+                                <div class="certificados-curso__logo">
+                                    <img src="./img/udemy.png" alt="" />
+                                </div>
+                                <div class="certificados-curso__descripcion">
+                                    <h3>Curso Programación para principiantes - Primeros pasos</h3>
+                                    <p>Udemy</p>
+                                    <a href="https://ude.my/UC-71a7d37e-d7f1-49ad-8b3e-9d70eb8c7f5e" target="_blank">Ver
+                                        credencial</a>
+                                </div>
+                            </div>
+                            <!-- platzi -->
+                            <div class="contenido__certificados-curso">
+                                <div class="certificados-curso__logo">
+                                    <img src="./img/platzi.png" alt="" />
+                                </div>
+                                <div class="certificados-curso__descripcion">
+                                    <h3>Curso Básico de JavaScript</h3>
+                                    <p>Platzi</p>
+                                    <a href="https://platzi.com/p/YeiAleXP/curso/1814-basico-javascript/diploma/detalle/"
+                                        target="_blank">Ver credencial</a>
+                                </div>
+                            </div>
+                            <div class="contenido__certificados-curso">
+                                <div class="certificados-curso__logo">
+                                    <img src="./img/platzi.png" alt="" />
+                                </div>
+                                <div class="certificados-curso__descripcion">
+                                    <h3>Curso de Fundamentos de Node.js</h3>
+                                    <p>Platzi</p>
+                                    <a href="https://platzi.com/p/YeiAleXP/curso/1759-fundamentos-node/diploma/detalle/"
+                                        target="_blank">Ver credencial</a>
+                                </div>
+                            </div>
+                            <!-- Alura Latam -->
+                            <div class="contenido__certificados-curso">
+                                <div class="certificados-curso__logo">
+                                    <img src="./img/aluraoracle.png" alt="" />
+                                </div>
+                                <div class="certificados-curso__descripcion">
+                                    <h3>Curso Lógica de programación: sumérgete en la programación con JavaScript</h3>
+                                    <p>Alura Latam</p>
+                                    <a href="https://app.aluracursos.com/certificate/863e615d-6b53-43b5-ba9f-ea45ebf60052?lang/"
+                                        target="_blank">Ver credencial</a>
+                                </div>
+                            </div>
+                            <div class="contenido__certificados-curso">
+                                <div class="certificados-curso__logo">
+                                    <img src="./img/aluraoracle.png" alt="" />
+                                </div>
+                                <div class="certificados-curso__descripcion">
+                                    <h3>Curso Lógica de programación: explorar funciones y listas</h3>
+                                    <p>Alura Latam</p>
+                                    <a href="https://app.aluracursos.com/certificate/226350d8-957a-4c65-bd47-b315e6b33a2c?lang"
+                                        target="_blank">Ver credencial</a>
+                                </div>
+                            </div>
+                            <div class="contenido__certificados-curso">
+                                <div class="certificados-curso__logo">
+                                    <img src="./img/aluraoracle.png" alt="" />
+                                </div>
+                                <div class="certificados-curso__descripcion">
+                                    <h3>Curso HTML y CSS: trabajando con responsividad y publicación de proyectos</h3>
+                                    <p>Alura Latam</p>
+                                    <a href="https://app.aluracursos.com/certificate/ea025920-ff46-44e6-91cd-88b7e0ece61c?lang"
+                                        target="_blank">Ver credencial</a>
+                                </div>
+                            </div>
+                            <div class="contenido__certificados-curso">
+                                <div class="certificados-curso__logo">
+                                    <img src="./img/aluraoracle.png" alt="" />
+                                </div>
+                                <div class="certificados-curso__descripcion">
+                                    <h3>Curso HTML y CSS: header, footer y variables CSS</h3>
+                                    <p>Alura Latam</p>
+                                    <a href="https://app.aluracursos.com/certificate/18063ee5-709a-4725-981c-51f488da2109?lang"
+                                        target="_blank">Ver credencial</a>
+                                </div>
+                            </div>
+                            <div class="contenido__certificados-curso">
+                                <div class="certificados-curso__logo">
+                                    <img src="./img/aluraoracle.png" alt="" />
+                                </div>
+                                <div class="certificados-curso__descripcion">
+                                    <h3>Curso HTML y CSS: ambientes de desarrollo, estructura de archivos y tags</h3>
+                                    <p>Alura Latam</p>
+                                    <a href="https://app.aluracursos.com/certificate/f95892b4-09f3-4887-b103-f5f2ebdc30c7?lang"
+                                        target="_blank">Ver credencial</a>
+                                </div>
+                            </div>
+                            <div class="contenido__certificados-curso">
+                                <div class="certificados-curso__logo">
+                                    <img src="./img/aluraoracle.png" alt="" />
+                                </div>
+                                <div class="certificados-curso__descripcion">
+                                    <h3>Curso HTML y CSS: Clases, Posicionamiento y Flexbox</h3>
+                                    <p>Alura Latam</p>
+                                    <a href="https://app.aluracursos.com/certificate/ad1a5f8f-cbd6-43cf-bd6b-30ff60f270d8?lang"
+                                        target="_blank">Ver credencial</a>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="contenido__certificados-links">
+                            <a class="cerrarCertificados">Cerrar</a>
+                        </div>
+                    </section>
                 </section>
+
                 <section class="main__info">
                     <div class="info__skills">
                         <h2>HABILIDADES</h2>
@@ -349,7 +490,7 @@
                                 <path d="M16 11h1"></path>
                                 <path d="M16 15h1"></path>
                             </svg>
-                            <span>LEER LIBROS DE SUPERACION PERSONAL</span>
+                            <span>LEER LIBROS</span>
                         </div>
                         <div class="info__hobbie">
                             <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
@@ -435,12 +576,15 @@
             <h2>PROYECTOS</h2>
             <div class="proyectos__container">
                 <div class="proyecto">
-                    <img src="img/aluraGeek.png" alt="alura Geek">
+                    <img src="img/aluraGeek.png" alt="alura Geek" />
                     <h3>Alura Geek</h3>
-                    <p>Este proyecto simula el funcionamiento de una tienda virtual, permitiendo a los usuarios
-                        visualizar una lista de productos, agregar nuevos productos y eliminar los existentes. En su
-                        desarrollo se implementaron diversas técnicas fundamentales de desarrollo web, utilizando HTML,
-                        CSS y JavaScript.</p>
+                    <p>
+                        Este proyecto simula el funcionamiento de una tienda virtual,
+                        permitiendo a los usuarios visualizar una lista de productos,
+                        agregar nuevos productos y eliminar los existentes. En su
+                        desarrollo se implementaron diversas técnicas fundamentales de
+                        desarrollo web, utilizando HTML, CSS y JavaScript.
+                    </p>
                     <div class="proyecto__link">
                         <a target="_blank" href="https://github.com/yplazas/Alura-geek--Alura-Latam.git">
                             <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
@@ -452,16 +596,18 @@
                             </svg>
                             <span class="proyecto__link-text">Codigo</span>
                         </a>
-
                     </div>
                 </div>
                 <div class="proyecto">
-                    <img src="img/encriptadorTexto.png" alt="Encriptador de texto">
+                    <img src="img/encriptadorTexto.png" alt="Encriptador de texto" />
                     <h3>Encriptador de texto</h3>
-                    <p>Es una aplicación que encripta textos, donde se podrá intercambiar mensajes secretos con otras
-                        personas
-                        que sepan el secreto de la encriptación utilizada. En su desarrollo se implementaron diversas
-                        técnicas fundamentales de desarrollo web, utilizando HTML, CSS y JavaScript.</p>
+                    <p>
+                        Es una aplicación que encripta textos, donde se podrá intercambiar
+                        mensajes secretos con otras personas que sepan el secreto de la
+                        encriptación utilizada. En su desarrollo se implementaron diversas
+                        técnicas fundamentales de desarrollo web, utilizando HTML, CSS y
+                        JavaScript.
+                    </p>
 
                     <div class="proyecto__link">
                         <a target="_blank"
@@ -478,11 +624,15 @@
                     </div>
                 </div>
                 <div class="proyecto">
-                    <img src="img/dashboard.png" alt="dashboard">
+                    <img src="img/dashboard.png" alt="dashboard" />
                     <h3>Dashboard</h3>
-                    <p>Este proyecto consiste en la creación de un clon de un dashboard, utilizando conocimientos en
-                        HTML y CSS. Para el posicionamiento de los elementos se emplearon técnicas modernas como Grid y
-                        Flexbox. Además, este trabajo fue realizado en colaboración con lpolobeltran.</p>
+                    <p>
+                        Este proyecto consiste en la creación de un clon de un dashboard,
+                        utilizando conocimientos en HTML y CSS. Para el posicionamiento de
+                        los elementos se emplearon técnicas modernas como Grid y Flexbox.
+                        Además, este trabajo fue realizado en colaboración con
+                        lpolobeltran.
+                    </p>
                     <div class="proyecto__link">
                         <a target="_blank" href="https://github.com/yplazas/interfaz-dashboard.git">
                             <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
@@ -551,7 +701,7 @@
                         <path
                             d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173" />
                     </svg>
-                    <p>All rights reserved to Yeison</p>
+                    <p>Todos los derechos reservados - Yeison Plazas</p>
                 </div>
             </section>
         </footer>
